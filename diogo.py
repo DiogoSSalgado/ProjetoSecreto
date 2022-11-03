@@ -4,8 +4,8 @@ import os
 
 os.system('clear')
 val = True
-print("Digite seu nome!!")
-nome = input(">>>")
+print("Digite seu nome:")
+nome = input("->")
 nome = nome.capitalize()
 os.system('clear')
 
@@ -21,13 +21,25 @@ while True:
 			if num == 0:
 				print ("D\n" + nome+", o seu pênis é inexistente.\n")
 			else:
-				print ("D\n" + nome+", o seu pênis é de", num, "centímetros!!\n")
+				print ("D\n" + nome+", o seu pênis é de", num, "centímetros!\n")
 		val = False
 	else:
 		print("Calcular novamente?(S/N)")
-		pergunta = input(">>>")
+		pergunta = input("->")
 		if pergunta == "S" or pergunta == "s":
-
+			print("\nTrocar nome?(S/N)")
+			newnome = input("->")
+			newnome = newnome.capitalize()
+			os.system('clear')
+			
+			if newnome == "S" or newnome == "s":
+				print("Digite o novo nome:")
+				nome = input("->")
+			else:
+				if newnome == "N" or newnome == "n":
+					print('')
+				else:
+					print("Opção inválida!")
 			val = True
 			os.system('clear')
 			continue
@@ -36,10 +48,8 @@ while True:
 				os.system('clear')
 				break
 			else:
-				print("Opção inválida!")
 				os.system('clear')
 				continue
 
 print("Programa encerrado. </3")
-
 
